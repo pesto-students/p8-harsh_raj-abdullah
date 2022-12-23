@@ -34,14 +34,14 @@
         </article>
       </div>
     </article>
-    <form class="form" action="post">
+    <form class="form">
       <label>Title</label>
       <input type="radio" id="Mr" name="form_radio" value="Mr">
-      <label for="Mr">Mr</label>
+      <span for="Mr">Mr</span>
       <input type="radio" id="Mrs" name="form_radio" value="Mrs">
-      <label for="Mrs">Mrs</label>
+      <span for="Mrs">Mrs</span>
       <input type="radio" id="Miss" name="form_radio" value="Miss">
-      <label for="Miss">Miss</label><br/>
+      <span for="Miss">Miss</span><br/>
       <label for="fname">First name:</label>
       <input type="text" id="fname" name="fname"><br/>
       <label for="email">Email:</label>
@@ -49,8 +49,8 @@
       <label for="phone">Phone number:</label>
       <input type="number" id="phone" name="phone"><br>
       <label for="password">Password:</label>
-      <input type="text" id="password" name="password"><br>
-      <label for="CPassword">Confirm your password:</label>
+      <input type="password" id="password" name="password"><br>
+      <label for="CPassword">Confirm password:</label>
       <input type="text" id="CPassword" name="CPassword"><br>
       <label for="country">Country:</label>
       <select id="country" name="country">
@@ -60,7 +60,7 @@
         <option value="Pakistan">Pakistan</option>
       </select><br>
       <input type="checkbox" id="terms" name="terms" value="agree">
-      <label for="terms"> I agree to the <a href="#">terms and conditions</a> </label><br>
+      <span for="terms"> I agree to the <a href="#">terms and conditions</a> </span><br>
       <input type="submit" value="Sign up">
     </form>
   </main>
