@@ -2,7 +2,7 @@ function createStack() {
   const items = [];
   return {
     push(item) {
-      return items.push(item);
+      items.push(item);
     },
     pop() {
       return items.pop();
