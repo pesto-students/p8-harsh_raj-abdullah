@@ -1,0 +1,71 @@
+*{
+  margin: 0px;
+  box-sizing: border-box;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+.main{
+  margin: 0rem 1rem;
+  margin-bottom: 1rem;
+}
+.article-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.left-side, .right-side{
+  width: 650px;
+}
+.article{
+  margin-bottom: 3rem;
+  line-height: 1.3rem;
+  letter-spacing: 1px;
+}
+.picture{
+  display: flex;
+  justify-content: center;
+}
+.picture > img{
+  width: 400px;
+  height: 250px;
+  margin-top: 2rem;
+}
+.article-header{
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.form{
+  margin-left: 3rem;
+}
+.form > input, select{
+  margin-bottom: 16px;
+  text-align: top;
+}
+.form > select{
+  width: 170px;
+}
+.form > label:nth-child(n){
+  display: inline-block;
+  width: 130px;
+  text-align: left;
+}
+a{
+  color: #e1adc6;
+}
+
+@media only screen and (max-width: 500px) {
+  .form{
+    margin-left: 0rem;
+  }
+  .picture > img{
+    width: 250px;
+    height: 175px;
+    margin-top: 1rem;
+  }
+  .left-side, .right-side{
+    width: 450px;
+  }
+}
