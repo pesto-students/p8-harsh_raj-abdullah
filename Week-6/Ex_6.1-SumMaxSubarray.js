@@ -1,3 +1,4 @@
+//  Kadane's Algorithms
 function maxSubArray (nums){
   let maxSum = nums[0];
   let currSum = 0;
