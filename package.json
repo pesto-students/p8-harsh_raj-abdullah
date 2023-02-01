@@ -1,0 +1,22 @@
+{
+  "name": "p8-harsh_raj-abdullah",
+  "version": "1.0.0",
+  "description": "Welcome to Pesto assignments.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pesto-students/p8-harsh_raj-abdullah.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pesto-students/p8-harsh_raj-abdullah/issues"
+  },
+  "homepage": "https://github.com/pesto-students/p8-harsh_raj-abdullah#readme",
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
+}
