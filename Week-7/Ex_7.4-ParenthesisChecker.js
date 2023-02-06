@@ -1,5 +1,5 @@
 function checkParenthesis(exp){
-  const openParenthesis = '({['
+  const openParenthesis = '({[';
   const stack = [];
   for( let paren of exp){
     if(openParenthesis.includes(paren)) stack.push(paren);

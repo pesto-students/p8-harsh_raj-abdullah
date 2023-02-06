@@ -29,8 +29,6 @@ function hasCycleLL(head){
     }
     console.log('Cycle found at node : ' + pointer.val);
   }
-
-
   return isFound; 
 }
 
