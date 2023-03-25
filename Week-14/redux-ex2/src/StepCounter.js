@@ -1,11 +1,29 @@
 import React from "react";
+// import { connect } from "react-redux";
+import { useDispatch } from 'react-redux'
 
-export default function StepCounter(){
+function StepCounter(){
+  // const { addStep, resetSteps } = props;
+  const dispatch = useDispatch();
+
+  const addStep = () => dispatch({ type: 'ADD_STEP' });
+  const resetSteps = () => dispatch({ type: 'RESET_STEP' });
+  
   return (
     <div>
-      <button className="btn add">Add a Step</button>
+      <button onClick={addStep} className="btn add">Add a Step</button>
       <br />
-      <button className="btn reset">Reset Steps</button>
+      <button onClick={resetSteps} className="btn reset">Reset Steps</button>
     </div>
   )
 }
+
+export default StepCounter;
+
+// using connect method
+// const mapDispatchToProps = {
+//   addStep: () => ({ type: 'ADD_STEP' }),
+//   resetSteps: () => ({ type: 'RESET_STEP' })
+// }
+
+// export default connect(null, mapDispatchToProps)(StepCounter)
