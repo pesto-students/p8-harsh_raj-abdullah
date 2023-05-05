@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 import validator from "validator";
+import bcrypt from "bcrypt";
+import jwt  from "jsonwebtoken";
 
-const schema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Please enter your name']
@@ -18,14 +20,25 @@ const schema = new mongoose.Schema({
     minLength: [6, 'Password must be at least 6 characters'],
     select: false,
   },
-  assets:[{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Assets"
-  }],
   createdAt:{
     type: Date,
     default: Date.now,
   }
 })
 
-export const User = mongoose.model('User', schema);
+UserSchema.pre("save", async function (next) {
+  if(this.isModified("password")){
+    this.password = await bcrypt.hash(this.password, 10)
+  }
+  next();
+})
+
+UserSchema.methods.matchPassword = async function (password) {
+  return await bcrypt.compare(password, this.password)
+}
+
+UserSchema.methods.generateToken = async function () {
+  return jwt.sign({ userId: this._id }, process.env.JWT_SECRET)
+}
+
+export const User = mongoose.model('User', UserSchema);

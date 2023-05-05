@@ -1,14 +1,9 @@
 import express from "express";
-import { User } from "../models/user.js";
+import { signup, login } from "../controllers/userControllers.js"
 
 const router = express.Router();
 
-router.get('/users', async (req, res, next) => {
-  const users = await User.find();
-  res.status(200).json({
-    success: true,
-    users
-  })
-})
+router.post('/signup', signup)
+router.post('/login', login)
 
 export default router;
