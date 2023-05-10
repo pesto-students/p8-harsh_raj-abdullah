@@ -14,8 +14,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/v1", user)
-app.use("/api/v1", isAuthenticated, asset)
+app.use("/api/v1/", user)
+app.use("/api/v1/asset", isAuthenticated, asset)
 
 
 app.use(ErrorMiddleware)
