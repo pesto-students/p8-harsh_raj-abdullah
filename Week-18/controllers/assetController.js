@@ -38,7 +38,6 @@ const updateAsset = catchAsync(async (req, res) => {
   if(!mongoose.Types.ObjectId.isValid(id)) throw new ApiError(404, "Invalid Asset Id");
   const asset = await Asset.findByIdAndUpdate(id, req.body, { useFindAndModify: false, new: true });
   if(!asset) throw new ApiError(404, "Invalid Asset Id");
-  console.log(asset, id)
   await asset.save()
 
   res.status(200).json({

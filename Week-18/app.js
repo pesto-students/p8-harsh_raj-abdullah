@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import user from "./routers/userRoutes.js"
 import asset from "./routers/assetRoutes.js"
+import expense from "./routers/expenseRoutes.js"
 import { ErrorMiddleware } from "./middlewares/error.js";
 import isAuthenticated from "./middlewares/auth.js";
 
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/", user)
 app.use("/api/v1/asset", isAuthenticated, asset)
+app.use("/api/v1/expense", isAuthenticated, expense)
 
 
 app.use(ErrorMiddleware)
