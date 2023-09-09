@@ -1,0 +1,94 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282a36;
+  color: #bd93f9;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.todos-container {
+  max-height: 550px;
+  overflow: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+/*scroll bar custom styles*/
+.todos-container::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 20px;
+}
+.todos-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+.todos-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /*no transitions in webkit components*/
+}
+
+.input {
+  border: none;
+  border-radius: 5px ;
+  background: #f8f8f2;
+  color: 	#44475a;
+  padding: 5px;
+}
+
+.btn{
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px 10px;
+  color: white;
+  background-color: rgb(64, 64, 199);
+}
+
+.content{
+  padding: 0px 8px;
+}
+
+.icon{
+  margin: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+}
+
+.todo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  height: 100%;
+}
